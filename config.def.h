@@ -68,13 +68,15 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"rofi", "-show", "drun"};
 static const char *termcmd[] = {"wezterm", "start", "--always-new-process"};
-static const char *lockcmd[] = {"betterlockscreen", "-l"};
+static const char *lockcmd[] = {"betterlockscreen -l"};
+static const char *screenshotcmd[] = {"flameshot", "gui"};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
     {MODKEY | ShiftMask, XK_l, spawn, {.v = lockcmd}},
+    {MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
