@@ -70,6 +70,7 @@ static const char *dmenucmd[] = {"rofi", "-show", "drun"};
 static const char *termcmd[] = {"wezterm", "start", "--always-new-process"};
 static const char *lockcmd[] = {"betterlockscreen -l"};
 static const char *screenshotcmd[] = {"flameshot", "gui"};
+static const char *screenshotcmd2[] = {"flameshot gui"};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -77,6 +78,7 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
     {MODKEY | ShiftMask, XK_l, spawn, {.v = lockcmd}},
     {MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
+    {MODKEY, XK_s, spawn, {.v = screenshotcmd2}},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
