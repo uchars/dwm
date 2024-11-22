@@ -38,8 +38,6 @@ static const Rule rules[] = {
 	{".blueman-manager-wrapped", NULL, NULL, 1 << 8, 1, -1},
 	{"pavucontrol", NULL, NULL, 1 << 8, 1, -1},
 	{"Pavucontrol", NULL, NULL, 1 << 8, 1, -1},
-	{"nextcloud", NULL, NULL, 1 << 8, 1, -1},
-	{"Nextcloud", NULL, NULL, 1 << 8, 1, -1},
 };
 
 /* layout(s) */
