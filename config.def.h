@@ -38,6 +38,8 @@ static const Rule rules[] = {
 	{".blueman-manager-wrapped", NULL, NULL, 1 << 8, 1, -1},
 	{"pavucontrol", NULL, NULL, 1 << 8, 1, -1},
 	{"Pavucontrol", NULL, NULL, 1 << 8, 1, -1},
+	{"nextcloud", NULL, NULL, 1 << 8, 1, -1},
+	{"Nextcloud", NULL, NULL, 1 << 8, 1, -1},
 };
 
 /* layout(s) */
@@ -64,13 +66,11 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
-/* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {"rofi", "-show", "drun"};
-static const char *termcmd[] = {"wezterm", "start", "--always-new-process"};
-static const char *lockcmd[] = {"betterlockscreen -l"};
-static const char *screenshotcmd[] = {"flameshot", "gui"};
-static const char *screenshotcmd2[] = {"flameshot gui"};
+static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL};
+static const char *termcmd[] = {"wezterm", "start", "--always-new-process", NULL};
+static const char *lockcmd[] = {"betterlockscreen", "-l", NULL};
+static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
