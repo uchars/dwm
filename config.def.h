@@ -37,6 +37,8 @@ static const Rule rules[] = {
 	{"pavucontrol", NULL, NULL, 1 << 8, 1, -1},
 	{"Pavucontrol", NULL, NULL, 1 << 8, 1, -1},
 	{".blueman-applet-wrapped", NULL, NULL, 1<<8, 1, -1},
+    {"steamwebhelper", NULL, NULL, 0, 1, -1},
+    {"steam", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
