@@ -37,8 +37,8 @@ static const Rule rules[] = {
 	{"pavucontrol", NULL, NULL, 1 << 8, 1, -1},
 	{"Pavucontrol", NULL, NULL, 1 << 8, 1, -1},
 	{".blueman-applet-wrapped", NULL, NULL, 1<<8, 1, -1},
-    {"steamwebhelper", NULL, NULL, 0, 1, -1},
-    {"steam", NULL, NULL, 0, 1, -1},
+	{"steamwebhelper", NULL, NULL, 0, 1, -1},
+	{"steam", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
@@ -70,6 +70,7 @@ static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL};
 static const char *termcmd[] = {"wezterm", "start", "--always-new-process", NULL};
 static const char *lockcmd[] = {"betterlockscreen", "-l", NULL};
 static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
+static const char *kbdswitchcmd[] = {"kbdswitch.sh", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -77,6 +78,7 @@ static const Key keys[] = {
 	{MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
 	{MODKEY | ShiftMask, XK_l, spawn, {.v = lockcmd}},
 	{MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
+	{MODKEY | ShiftMask, XK_space, spawn, {.v = kbdswitchcmd}},
 	{MODKEY, XK_b, togglebar, {0}},
 	{MODKEY, XK_j, focusstack, {.i = +1}},
 	{MODKEY, XK_k, focusstack, {.i = -1}},
