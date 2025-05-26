@@ -39,6 +39,7 @@ static const Rule rules[] = {
 	{".blueman-applet-wrapped", NULL, NULL, 1<<8, 1, -1},
 	{"steamwebhelper", NULL, NULL, 0, 1, -1},
 	{"steam", NULL, NULL, 0, 1, -1},
+	{NULL, NULL, "Bluetooth Devices", 0, 1, -1},
 };
 
 /* layout(s) */
