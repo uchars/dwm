@@ -50,7 +50,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod2Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -66,7 +66,7 @@ static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL};
 static const char *termcmd[] = {"alacritty", NULL};
 static const char *lockcmd[] = {"betterlockscreen", "-l", NULL};
 static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
-static const char *kbdswitchcmd[] = {"kbdswitch.sh", NULL};
+static const char *kbdswitchcmd[] = {"rofi-kbdswitch", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -74,7 +74,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd} },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = screenshotcmd} },
-	{ MODKEY|ShiftMask,             XK_space,  spawn,          {.v = kbdswitchcmd} },
+	{ Mod1Mask|ShiftMask,           XK_space,  spawn,          {.v = kbdswitchcmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
