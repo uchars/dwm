@@ -72,7 +72,7 @@ static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL};
 static const char *termcmd[] = {"alacritty", NULL};
 static const char *lockcmd[] = {"betterlockscreen", "-l", NULL};
 static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
-static const char *kbdswitchcmd[] = {"rofi-kbdswitch", NULL};
+static const char *kbdswitchcmd[] = {"kbdswitch.sh", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
