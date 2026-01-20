@@ -33,10 +33,10 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{"Gimp", NULL, NULL, 0, 1, -1},
-	{"Firefox", NULL, NULL, 1 << 8, 0, -1},
-	{"pavucontrol", NULL, NULL, 1 << 8, 1, -1},
-	{"Pavucontrol", NULL, NULL, 1 << 8, 1, -1},
-	{".blueman-applet-wrapped", NULL, NULL, 1<<8, 1, -1},
+	{"Firefox", NULL, NULL, 0, 0, -1},
+	{"pavucontrol", NULL, NULL, 0, 1, -1},
+	{"Pavucontrol", NULL, NULL, 0, 1, -1},
+	{".blueman-applet-wrapped", NULL, NULL, 0, 1, -1},
 	{"steamwebhelper", NULL, NULL, 0, 1, -1},
 	{"steam", NULL, NULL, 0, 1, -1},
 	{NULL, NULL, "Bluetooth Devices", 0, 1, -1},
