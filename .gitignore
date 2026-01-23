@@ -1,4 +1,6 @@
 *.o
-config.h
 patch/
+config.def.h
 dwm
+*.orig
+*.rej
