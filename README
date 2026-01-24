@@ -15,6 +15,7 @@ center: https://dwm.suckless.org/patches/center/dwm-center-6.2.diff
 focusonclick: https://dwm.suckless.org/patches/focusonclick/dwm-focusonclick-20200110-61bb8b2.diff
 selfrestart: https://dwm.suckless.org/patches/selfrestart/dwm-r1615-selfrestart.diff
 focusdir: https://github.com/bakkeby/patches/blob/master/dwm/dwm-focusdir-6.6.diff
+centered(floating)master: https://dwm.suckless.org/patches/centeredmaster/dwm-centeredmaster-6.1.diff
 
 Requirements
 ------------
