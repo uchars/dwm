@@ -12,6 +12,8 @@ actualfullscreen: https://dwm.suckless.org/patches/actualfullscreen/dwm-actualfu
 statuscmd: https://dwm.suckless.org/patches/statuscmd/dwm-statuscmd-20241009-8933ebc.diff
 status2d(customized): github.com/sipi/dwm-status2d/blob/master/dwm-status2d-6.5.diff
 center: https://dwm.suckless.org/patches/center/dwm-center-6.2.diff
+focusonclick: https://dwm.suckless.org/patches/focusonclick/dwm-focusonclick-20200110-61bb8b2.diff
+selfrestart: https://dwm.suckless.org/patches/selfrestart/dwm-r1615-selfrestart.diff
 
 Requirements
 ------------

@@ -10,15 +10,35 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int focusonwheel       = 0;
 static int swallowfloating          = 0;        /* 1 means swallow floating windows by default */
 static const char *fonts[]          = { "SauceCodePro Nerd Font:size=12" };
 static const char dmenufont[]       = "monospace:size=10";
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
+
+// // warm dark
+// static char normbgcolor[]           = "#2b1b17";
+// static char normbordercolor[]       = "#4b2b27";
+// static char normfgcolor[]           = "#e0d0c0";
+// static char selfgcolor[]            = "#ffffff";
+// static char selbordercolor[]        = "#d65d0e";
+// static char selbgcolor[]            = "#d65d0e";
+
+// forest green
+static char normbgcolor[]           = "#1e2d1e";
+static char normbordercolor[]       = "#3a4a3a";
+static char normfgcolor[]           = "#c0d0c0";
+static char selfgcolor[]            = "#ffffff";
+static char selbordercolor[]        = "#2ca02c";
+static char selbgcolor[]            = "#2ca02c";
+
+// // cyberpunk neon
+// static char normbgcolor[]           = "#0f0f0f";
+// static char normbordercolor[]       = "#333333";
+// static char normfgcolor[]           = "#cccccc";
+// static char selfgcolor[]            = "#ff6ec7";
+// static char selbordercolor[]        = "#00ffff";
+// static char selbgcolor[]            = "#00ffff";
+
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -102,6 +122,8 @@ ResourcePref resources[] = {
 		{ "mfact",      	 	FLOAT,   &mfact },
 };
 
+#include "selfrestart.c"
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -156,6 +178,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
 };
 
 /* button definitions */
