@@ -10,6 +10,7 @@ stacker: https://dwm.suckless.org/patches/stacker/dwm-stacker-6.6.diff
 xresources: https://dwm.suckless.org/patches/xresources/dwm-xresources-6.2.diff
 actualfullscreen: https://dwm.suckless.org/patches/actualfullscreen/dwm-actualfullscreen-20211013-cb3f58a.diff
 statuscmd: https://dwm.suckless.org/patches/statuscmd/dwm-statuscmd-20241009-8933ebc.diff
+status2d(customized): github.com/sipi/dwm-status2d/blob/master/dwm-status2d-6.5.diff
 
 Requirements
 ------------
