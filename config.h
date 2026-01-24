@@ -26,7 +26,7 @@ static char normbordercolor[]       = "#3d423c";
 static char normfgcolor[]           = "#c8ccc4";
 static char selfgcolor[]            = "#ffffff";
 static char selbordercolor[]        = "#6b7f5f";
-static char selbgcolor[]            = "#6b7f5f";
+static char selbgcolor[]            = "#3d423c";
 
 static char *colors[][3] = {
        /*               fg           bg           border   */
