@@ -26,17 +26,18 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "󰖟", "", "", "", "󰈙", "", "󰎆", "󰻂" };
+static const char *tags[] = { "󰋙", "󰋙", "󰋙", "󰋙", "󰋙", "󰋙"};
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "sysscratch",  NULL,       NULL,       0,       1,           0 },
+	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
+	{ "Gimp",     NULL,       NULL,       0,            0, 1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,      0, 0,           -1 },
+	{ "sysscratch",  NULL,       NULL,       0,       1, 1,           -1 },
+	{ "pavucontrol",  NULL,       NULL,       0,       1, 1,           -1 },
 };
 
 /* layout(s) */
@@ -154,9 +155,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
