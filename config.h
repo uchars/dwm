@@ -15,29 +15,13 @@ static int swallowfloating          = 0;        /* 1 means swallow floating wind
 static const char *fonts[]          = { "SauceCodePro Nerd Font:size=12" };
 static const char dmenufont[]       = "monospace:size=10";
 
-// // warm dark
-// static char normbgcolor[]           = "#2b1b17";
-// static char normbordercolor[]       = "#4b2b27";
-// static char normfgcolor[]           = "#e0d0c0";
-// static char selfgcolor[]            = "#ffffff";
-// static char selbordercolor[]        = "#d65d0e";
-// static char selbgcolor[]            = "#d65d0e";
-
 // forest green
-static char normbgcolor[]           = "#1e2d1e";
-static char normbordercolor[]       = "#3a4a3a";
-static char normfgcolor[]           = "#c0d0c0";
+static char normbgcolor[]           = "#20231f";
+static char normbordercolor[]       = "#3d423c";
+static char normfgcolor[]           = "#c8ccc4";
 static char selfgcolor[]            = "#ffffff";
-static char selbordercolor[]        = "#2ca02c";
-static char selbgcolor[]            = "#2ca02c";
-
-// // cyberpunk neon
-// static char normbgcolor[]           = "#0f0f0f";
-// static char normbordercolor[]       = "#333333";
-// static char normfgcolor[]           = "#cccccc";
-// static char selfgcolor[]            = "#ff6ec7";
-// static char selbordercolor[]        = "#00ffff";
-// static char selbgcolor[]            = "#00ffff";
+static char selbordercolor[]        = "#6b7f5f";
+static char selbgcolor[]            = "#6b7f5f";
 
 static char *colors[][3] = {
        /*               fg           bg           border   */
@@ -135,10 +119,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
-	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
+	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_h,      focusdir,       {.i = 0 } }, // left
+	{ MODKEY,                       XK_l,      focusdir,       {.i = 1 } }, // right
+	{ MODKEY,                       XK_k,      focusdir,       {.i = 2 } }, // up
+	{ MODKEY,                       XK_j,      focusdir,       {.i = 3 } }, // down
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },
