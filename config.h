@@ -70,6 +70,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -93,6 +94,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *langswitchcmd[]  = { "kbdswitch.sh", NULL };
 
 /*
  * Xresources preferences to load at startup
@@ -119,6 +121,8 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ ShiftMask,                    XK_Alt_L,  spawn,          {.v = langswitchcmd } },
+	{ Mod1Mask,                     XK_Shift_L,spawn,          {.v = langswitchcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
