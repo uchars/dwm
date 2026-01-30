@@ -47,6 +47,10 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,      0, 0,           -1 },
 	{ "sysscratch",  NULL,       NULL,       0,       1, 1,           -1 },
 	{ "pavucontrol",  NULL,       NULL,       0,       1, 1,           -1 },
+	{ "PenTablet",  NULL,       NULL,       0,       1, 1,           -1 },
+	{ "Emulator",  NULL,       NULL,       0,       0, 1,           -1 },
+	{ "com.yubico.yubioath",  NULL,       NULL,       0,       0, 1,           -1 },
+	{ NULL,  NULL,       "Extension: (Bitwarden Password Manager) - Bitwarden — Mozilla Firefox",       0,       0, 1,           -1 },
 };
 
 /* layout(s) */
