@@ -17,7 +17,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static int swallowfloating          = 0;        /* 1 means swallow floating windows by default */
-static const char *fonts[]          = { "SauceCodePro Nerd Font:size=12" };
+static const char *fonts[]          = { "3270 Nerd Font Mono:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
 
 // forest green
